@@ -1,6 +1,9 @@
 import 'dart:io';
 
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:startupapp/routers/application.dart';
+import 'package:startupapp/routers/routers.dart';
 import 'package:startupapp/views/home.dart';
 import 'package:startupapp/views/login_page/login_page.dart';
 
@@ -10,7 +13,8 @@ class MyApp extends StatefulWidget {
   // This widget is the root of your application.
   MyApp() {
     final router = new Router();
-    Routes
+    Routes.configureRoutes(router);
+    Application.router = router;
   }
   @override
   State<StatefulWidget> createState() {
@@ -51,7 +55,7 @@ class _MyAppState extends State<MyApp> {
       _isLoading = true;
     });
 
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(Duration(seconds: 2), () {
       print('delay 5 seconds');
       setState(() {
         _isLoading = false;

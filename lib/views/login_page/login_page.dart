@@ -1,6 +1,9 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:startupapp/routers/application.dart';
+import 'package:startupapp/routers/routers.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -249,7 +252,12 @@ class _LoginPageState extends State<LoginPage> {
                                   decoration: TextDecoration.underline),
                             ),
                             onPressed: () {
-
+                              Application.router.navigateTo(
+                                context,
+                                Routes.home,
+                                clearStack: true,
+                                transition: TransitionType.nativeModal,
+                              );
                             },
                           )
                         ],
