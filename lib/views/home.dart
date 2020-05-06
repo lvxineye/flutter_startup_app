@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:startupapp/routers/application.dart';
-import 'package:startupapp/views/main_page.dart';
+import 'package:startupapp/views/main_page/main_page.dart';
 import 'package:startupapp/views/user_page/user_page.dart';
 import 'package:startupapp/views/widget_page/widget_page.dart';
 

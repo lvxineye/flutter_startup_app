@@ -10,7 +10,7 @@ import 'package:startupapp/views/login_page/login_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
+  // This widget is the root of your application.`
   MyApp() {
     final router = new Router();
     Routes.configureRoutes(router);
